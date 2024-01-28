@@ -72,10 +72,26 @@ if __name__ == "__main__":
         
     count = 0
     content_list = []
+    progress_bar = []
     for i, j in dict_.items():
         content_list.append(f"{i} : {j[0]} / {j[1]}")
+        progress_bar.append([str(round(int(j[0])/int(j[1])*100, 2))+"%"])
         if count == 2: break
         count += 1
+    count = 0
+    for i in progress_bar:
+        character = ''
+        for j in range(int(float(i[0][:-1])/10)): character += "━━"
+        for j in range(10-int(float(i[0][:-1])/10)): character += "--"
+        progress_bar[count].append(character)
+        temp = progress_bar[count][0]
+        progress_bar[count][0] = progress_bar[count][1]
+        progress_bar[count][1] = temp
+        if len(progress_bar[count][1]) == 4: progress_bar[count][1] = progress_bar[count][1][:-1] + "0%"
+        if len(progress_bar[count][1]) == 3: progress_bar[count][1] = progress_bar[count][1][:-1] + "00%"
+        progress_bar[count][0] = ">" + progress_bar[count][0] + " " + progress_bar[count][1]
+        progress_bar[count][1] = ''
+        count += 1 
         
     if bg_color != "None": bg_img, type_name = simple_bg(bg_color, img_size)
     else: bg_img, type_name = customize_img(customize_path, img_size)
@@ -128,23 +144,25 @@ if __name__ == "__main__":
         for word in content:
             move = 16 * i
             if count == 0: draw_text.text((bg_img.size[0]/3+move, bg_img.size[1]/2.5), word, font=font, fill=font_color)
-            elif count == 1: draw_text.text((bg_img.size[0]/3+move, bg_img.size[1]/1.9), word, font=font, fill=font_color)
-            elif count == 2: draw_text.text((bg_img.size[0]/3+move, bg_img.size[1]/1.5), word, font=font, fill=font_color)
+            elif count == 1: draw_text.text((bg_img.size[0]/3+move, bg_img.size[1]/1.65), word, font=font, fill=font_color)
+            elif count == 2: draw_text.text((bg_img.size[0]/3+move, bg_img.size[1]/1.25), word, font=font, fill=font_color)
             img_list.append(gif(bg_img))
             i = fine_tuning_word(word, i)
             i += 1
         count += 1
-    
+        
     i = 0
-    author = "Author:github.com/Junwu0615"
-    font = ImageFont.truetype(font_style, size=10)
-    for word in author:
-        move = 10 * i
-        draw_text.text((bg_img.size[0]/2.5+move, bg_img.size[1]/1.1), word, font=font, fill=font_color)
-        img_list.append(gif(bg_img))
-        i = fine_tuning_word(word, i)
-        i += 1
-    
+    font = ImageFont.truetype(font_style, size=7)
+    for content1, content2, content3 in zip(progress_bar[0], progress_bar[1], progress_bar[2]):
+        for w1, w2, w3 in zip(content1, content2, content3):
+            move = 9 * i
+            draw_text.text((bg_img.size[0]/3+move, bg_img.size[1]/2.5+25), w1, font=font, fill=font_color)
+            draw_text.text((bg_img.size[0]/3+move, bg_img.size[1]/1.65+25), w2, font=font, fill=font_color)
+            draw_text.text((bg_img.size[0]/3+move, bg_img.size[1]/1.25+25), w3, font=font, fill=font_color)
+            img_list.append(gif(bg_img))
+            i = fine_tuning_word(w1, i)
+            i += 1
+
     for i in range(20): img_list.append(gif(bg_img)) # gif 結尾停留時間久點
-    bg_img.save(save_path+f"{user_name}_leetcode_{type_name}.png")
-    img_list[0].save(save_path+f"{user_name}_leetcode_{type_name}.gif", save_all=True, append_images=img_list[1:], duration=60, loop=0, disposal=0)
+    #bg_img.save(save_path+f"{user_name}_leetcode_{type_name}.png")
+    img_list[0].save(save_path+f"{user_name}_leetcode_{type_name}.gif", save_all=True, append_images=img_list[1:], duration=60, loop=1, disposal=0)

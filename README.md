@@ -15,8 +15,8 @@
 | 事件 | 敘述 | 時間 |
 | :--: | :-- | :--: |
 | 初版 |  Graphics Interchange Format 版本 | 2024/01/27 |
-| - | 未來考慮 PDF 來呈現內容 | - |
-| - | 最初想像這位[大神](https://github.com/anuraghazra/github-readme-stats)的方法動態更新數據，但顯然俺不會... | - |
+| - | 擴增 PDF 來展現內容 | - |
+| - | 最初想向這位[大神](https://github.com/anuraghazra/github-readme-stats)的方法動態更新數據，但顯然俺不會... | - |
 
 ## How To Use
 
@@ -61,7 +61,7 @@ python LeetCode-Record-Sharing-Method.py -h
 <img src="https://github.com/Junwu0615/LeetCode-Record-Sharing-Method/blob/main/sample_img/01.jpg"/>
 
 ### I.　純色背景
-運行完畢後會分別產出 `png` / `gif` 檔。 </br>
+運行完畢後會產出 `gif` 檔。 </br>
 - `-i`　Sithis </br>
 - `-n`　"Sithis" </br>
 - `-f`　"AniMeMatrix-MB_EN.ttf" </br>
@@ -80,31 +80,26 @@ python LeetCode-Record-Sharing-Method.py -i Sithis -n "Sithis" -f "AniMeMatrix-M
 - `-f`　"AniMeMatrix-MB_EN.ttf" </br>
 - `-bc`　None </br>
 - `-fc`　"64,64,64" </br>
-- `-p`　"./sample_img/Jess Bailey Designs-httpswww.pexels.comzh-twphoto1097930.jpg" </br>
+- `-p`　"./sample_img/pexels-pixabay-235985.jpg" </br>
 ```python
-python LeetCode-Record-Sharing-Method.py -i Sithis -n "Sithis" -f "AniMeMatrix-MB_EN.ttf" -bc None -fc "64,64,64" -p "./sample_img/Jess Bailey Designs-httpswww.pexels.comzh-twphoto1097930.jpg"
+python LeetCode-Record-Sharing-Method.py -i Sithis -n "Sithis" -f "MAGNETOB.TTF" -bc None -fc "0,0,0" -p "./sample_img/pexels-pixabay-235985.jpg"
 ```
 ![00.gif](/sample_img/00.gif)
 
 ```python
-python LeetCode-Record-Sharing-Method.py -i Sithis -n "Sithis" -f "AniMeMatrix-MB_EN.ttf" -bc None -fc "255,255,255" -p "./sample_img/Evie Shaffer-httpswww.pexels.comzh-twphoto4004374.jpg"
+python LeetCode-Record-Sharing-Method.py -i Sithis -n "Sithis" -f "AniMeMatrix-MB_EN.ttf" -bc None -fc "255,255,255" -p "./sample_img/pexels-pixabay-164175.jpg"
 ```
 ![01.gif](/sample_img/01.gif)
 
 ```python
-python LeetCode-Record-Sharing-Method.py -i Sithis -n "Sithis" -f "AniMeMatrix-MB_EN.ttf" -bc None -fc "240,248,245" -p "./sample_img/Pixabay-httpswww.pexels.comzh-twphoto235985.jpg"
+python LeetCode-Record-Sharing-Method.py -i Sithis -n "Sithis" -f "MAGNETOB.TTF" -bc None -fc "255,250,250	" -p "./sample_img/pexels-pixabay-326333.jpg"
 ```
 ![02.gif](/sample_img/02.gif)
 
 ```python
-python LeetCode-Record-Sharing-Method.py -i Sithis -n "Sithis" -f "AniMeMatrix-MB_EN.ttf" -bc None -fc "255,250,250	" -p "./sample_img/Pixabay-httpswww.pexels.comzh-twphoto531880.jpg"
+python LeetCode-Record-Sharing-Method.py -i Sithis -n "Sithis" -f "AniMeMatrix-MB_EN.ttf" -bc None -fc "0,0,0" -p "./sample_img/pexels-pixabay-531880.jpg"
 ```
 ![03.gif](/sample_img/03.gif)
-
-```python
-python LeetCode-Record-Sharing-Method.py -i Sithis -n "Sithis" -f "AniMeMatrix-MB_EN.ttf" -bc None -fc "240,248,245" -p "./sample_img/Pixabay-httpswww.pexels.comzh-twphoto247671.jpg"
-```
-![04.gif](/sample_img/04.gif)
 
 </br>
 
