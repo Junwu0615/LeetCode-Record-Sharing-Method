@@ -14,9 +14,10 @@
 ## 歷史紀錄
 | 事件 | 敘述 | 時間 |
 | :--: | :-- | :--: |
-| 初版 |  Graphics Interchange Format 版本 | 2024/01/27 |
+| v1.0 |  Graphics Interchange Format | 2024/01/27 |
+| v1.1 |  新增陰影顏色、進度條顯示 | 2024/01/30 |
 | - | 擴增 PDF 來展現內容 | - |
-| - | 最初想向這位[大神](https://github.com/anuraghazra/github-readme-stats)的方法動態更新數據，但顯然俺不會... | - |
+| - | 最初想像這位[大神](https://github.com/anuraghazra/github-readme-stats)的方法動態更新數據，但顯然俺不會... | - |
 
 ## How To Use
 
@@ -46,14 +47,15 @@ python LeetCode-Record-Sharing-Method.py -h
 - `-i`　User ID :　Give a LeetCode user-id.
 - `-n`　User Name :　Give your name.
 - `-f`　Font :　Give a font type.　Default :　"AniMeMatrix-MB_EN.ttf"
-- `-bc`　Background Color :　Give a background color.　Default :　"#FFFFFF"
-- `-fc`　Font Color :　Give a font color.　Default :　"(64,64,64)"
+- `-bc`　Background Color :　Give a background color.　Default :　"#3C3C3C"
+- `-fc`　Font Color :　Give a font color.　Default :　"255,255,255"
+- `-fs`　Font Shadow :　Give a font shadow.　Default :　"39,39,39"
 - `-p`　Customize Path :　If you want to customize the picture, please give the path.　Default :　"None"
 
 </br>
 
 ### STEP.5　EXAMPLE
-範例是從 LeetCode 隨機看到的[訪客](https://leetcode.com/Sithis/)之數據來呈現，它數據比較豐富www。
+範例是從 LeetCode 看到的幾位解題達人 [Sithis](https://leetcode.com/Sithis/)、[numb3r5](https://leetcode.com/numb3r5/)、[uwi](https://leetcode.com/uwi/) 之數據來呈現，他們數據比較豐富 www。
 </br>
 </br>
 
@@ -67,11 +69,35 @@ python LeetCode-Record-Sharing-Method.py -h
 - `-f`　"AniMeMatrix-MB_EN.ttf" </br>
 - `-bc`　#FFFFFF </br>
 - `-fc`　"64,64,64" </br>
+- `-fs`　"39,64,64" </br>
 - `-p`　"None" </br>
 ```python
-python LeetCode-Record-Sharing-Method.py -i Sithis -n "Sithis" -f "AniMeMatrix-MB_EN.ttf" -bc #FFFFFF -fc "64,64,64" -p "None"
+python LeetCode-Record-Sharing-Method.py -i Sithis -n "Sithis" -f "AniMeMatrix-MB_EN.ttf" -bc #FFFFFF -fc "64,64,64" -fs "190,190,190" -p "None"
 ```
 ![Sithis.gif](/sample_img/Sithis_leetcode_simple_bg.gif)
+- `-i`　numb3r5 </br>
+- `-n`　"numb3r5" </br>
+- `-f`　"AniMeMatrix-MB_EN.ttf" </br>
+- `-bc`　#3C3C3C </br>
+- `-fc`　"255,255,255" </br>
+- `-fs`　"39,39,39" </br>
+- `-p`　"None" </br>
+```python
+python LeetCode-Record-Sharing-Method.py -i numb3r5 -n "numb3r5" -f "AniMeMatrix-MB_EN.ttf" -bc #3C3C3C	 -fc "255,255,255" -fs "39,39,39" -p "None"
+```
+![numb3r5.gif](/sample_img/numb3r5_leetcode_simple_bg.gif)
+- `-i`　uwi </br>
+- `-n`　"uwi" </br>
+- `-f`　"AniMeMatrix-MB_EN.ttf" </br>
+- `-bc`　#3C3C3C </br>
+- `-fc`　"255,255,255" </br>
+- `-fs`　"39,39,39" </br>
+- `-p`　"None" </br>
+```python
+python LeetCode-Record-Sharing-Method.py -i uwi -n "uwi" -f "AniMeMatrix-MB_EN.ttf" -bc #3C3C3C -fc "255,255,255" -fs "39,39,39" -p "None"
+```
+![uwi.gif](/sample_img/uwi_leetcode_simple_bg.gif)
+
 
 ### II.　自定義背景
 加入自定義的圖片，路徑放置於 `./sample_img/xxx` 。
@@ -82,24 +108,19 @@ python LeetCode-Record-Sharing-Method.py -i Sithis -n "Sithis" -f "AniMeMatrix-M
 - `-fc`　"64,64,64" </br>
 - `-p`　"./sample_img/pexels-pixabay-235985.jpg" </br>
 ```python
-python LeetCode-Record-Sharing-Method.py -i Sithis -n "Sithis" -f "MAGNETOB.TTF" -bc None -fc "0,0,0" -p "./sample_img/pexels-pixabay-235985.jpg"
+python LeetCode-Record-Sharing-Method.py -i Sithis -n "Sithis" -f "AniMeMatrix-MB_EN.ttf" -bc None -fc "39,39,39" -fs "157,157,157" -p "./sample_img/pexels-pixabay-235985.jpg"
 ```
 ![00.gif](/sample_img/00.gif)
 
 ```python
-python LeetCode-Record-Sharing-Method.py -i Sithis -n "Sithis" -f "AniMeMatrix-MB_EN.ttf" -bc None -fc "255,255,255" -p "./sample_img/pexels-pixabay-164175.jpg"
+python LeetCode-Record-Sharing-Method.py -i numb3r5 -n "numb3r5" -f "AniMeMatrix-MB_EN.ttf" -bc None -fc "255,255,255" -fs "39,39,39" -p "./sample_img/pexels-pixabay-164175.jpg"
 ```
 ![01.gif](/sample_img/01.gif)
 
 ```python
-python LeetCode-Record-Sharing-Method.py -i Sithis -n "Sithis" -f "MAGNETOB.TTF" -bc None -fc "255,250,250	" -p "./sample_img/pexels-pixabay-326333.jpg"
+python LeetCode-Record-Sharing-Method.py -i uwi -n "uwi" -f "SHOWG.TTF" -bc None -fc "255,250,250" -fs "39,39,39" -p "./sample_img/pexels-pixabay-531880.jpg"
 ```
 ![02.gif](/sample_img/02.gif)
-
-```python
-python LeetCode-Record-Sharing-Method.py -i Sithis -n "Sithis" -f "AniMeMatrix-MB_EN.ttf" -bc None -fc "0,0,0" -p "./sample_img/pexels-pixabay-531880.jpg"
-```
-![03.gif](/sample_img/03.gif)
 
 </br>
 
