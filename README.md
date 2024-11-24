@@ -37,7 +37,7 @@ pip install -r requirements.txt
 
 ### STEP.3　RUN
 ```python
-python LeetCode-Record-Sharing-Method.py -h
+python Entry.py -h
 ```
 
 </br>
@@ -59,8 +59,8 @@ python LeetCode-Record-Sharing-Method.py -h
 </br>
 </br>
 
-<img src="https://github.com/Junwu0615/LeetCode-Record-Sharing-Method/blob/main/sample_img/00.jpg"/>
-<img src="https://github.com/Junwu0615/LeetCode-Record-Sharing-Method/blob/main/sample_img/01.jpg"/>
+<img src="https://github.com/Junwu0615/LeetCode-Record-Sharing-Method/blob/main/Sample/00.jpg"/>
+<img src="https://github.com/Junwu0615/LeetCode-Record-Sharing-Method/blob/main/Sample/01.jpg"/>
 
 ### I.　純色背景
 運行完畢後會產出 `gif` 檔。 </br>
@@ -72,9 +72,9 @@ python LeetCode-Record-Sharing-Method.py -h
 - `-fs`　"39,64,64" </br>
 - `-p`　"None" </br>
 ```python
-python LeetCode-Record-Sharing-Method.py -i Sithis -n "Sithis" -f "AniMeMatrix-MB_EN.ttf" -bc #FFFFFF -fc "64,64,64" -fs "190,190,190" -p "None"
+python Entry.py -i Sithis -n "Sithis" -f "AniMeMatrix-MB_EN.ttf" -bc #FFFFFF -fc "64,64,64" -fs "190,190,190" -p "None"
 ```
-![Sithis.gif](/sample_img/Sithis_leetcode_simple_bg.gif)
+![Sithis.gif](/Sample/Sithis_leetcode_simple_bg.gif)
 - `-i`　numb3r5 </br>
 - `-n`　"numb3r5" </br>
 - `-f`　"AniMeMatrix-MB_EN.ttf" </br>
@@ -83,9 +83,9 @@ python LeetCode-Record-Sharing-Method.py -i Sithis -n "Sithis" -f "AniMeMatrix-M
 - `-fs`　"39,39,39" </br>
 - `-p`　"None" </br>
 ```python
-python LeetCode-Record-Sharing-Method.py -i numb3r5 -n "numb3r5" -f "AniMeMatrix-MB_EN.ttf" -bc #3C3C3C	 -fc "255,255,255" -fs "39,39,39" -p "None"
+python Entry.py -i numb3r5 -n "numb3r5" -f "AniMeMatrix-MB_EN.ttf" -bc #3C3C3C	 -fc "255,255,255" -fs "39,39,39" -p "None"
 ```
-![numb3r5.gif](/sample_img/numb3r5_leetcode_simple_bg.gif)
+![numb3r5.gif](/Sample/numb3r5_leetcode_simple_bg.gif)
 - `-i`　uwi </br>
 - `-n`　"uwi" </br>
 - `-f`　"AniMeMatrix-MB_EN.ttf" </br>
@@ -94,33 +94,33 @@ python LeetCode-Record-Sharing-Method.py -i numb3r5 -n "numb3r5" -f "AniMeMatrix
 - `-fs`　"39,39,39" </br>
 - `-p`　"None" </br>
 ```python
-python LeetCode-Record-Sharing-Method.py -i uwi -n "uwi" -f "AniMeMatrix-MB_EN.ttf" -bc #3C3C3C -fc "255,255,255" -fs "39,39,39" -p "None"
+python Entry.py -i uwi -n "uwi" -f "AniMeMatrix-MB_EN.ttf" -bc #3C3C3C -fc "255,255,255" -fs "39,39,39" -p "None"
 ```
-![uwi.gif](/sample_img/uwi_leetcode_simple_bg.gif)
+![uwi.gif](/Sample/uwi_leetcode_simple_bg.gif)
 
 
 ### II.　自定義背景
-加入自定義的圖片，路徑放置於 `./sample_img/xxx` 。
+加入自定義的圖片，路徑放置於 `./Sample/xxx` 。
 - `-i`　Sithis </br>
 - `-n`　"Sithis" </br>
 - `-f`　"AniMeMatrix-MB_EN.ttf" </br>
 - `-bc`　None </br>
 - `-fc`　"64,64,64" </br>
-- `-p`　"./sample_img/pexels-pixabay-235985.jpg" </br>
+- `-p`　"./Sample/pexels-pixabay-235985.jpg" </br>
 ```python
-python LeetCode-Record-Sharing-Method.py -i Sithis -n "Sithis" -f "AniMeMatrix-MB_EN.ttf" -bc None -fc "39,39,39" -fs "157,157,157" -p "./sample_img/pexels-pixabay-235985.jpg"
+python Entry.py -i Sithis -n "Sithis" -f "AniMeMatrix-MB_EN.ttf" -bc None -fc "39,39,39" -fs "157,157,157" -p "./Sample/pexels-pixabay-235985.jpg"
 ```
-![00.gif](/sample_img/00.gif)
+![00.gif](/Sample/Sithis_leetcode_external_img.gif)
 
 ```python
-python LeetCode-Record-Sharing-Method.py -i numb3r5 -n "numb3r5" -f "AniMeMatrix-MB_EN.ttf" -bc None -fc "255,255,255" -fs "39,39,39" -p "./sample_img/pexels-pixabay-164175.jpg"
+python Entry.py -i numb3r5 -n "numb3r5" -f "AniMeMatrix-MB_EN.ttf" -bc None -fc "255,255,255" -fs "39,39,39" -p "./Sample/pexels-pixabay-164175.jpg"
 ```
-![01.gif](/sample_img/01.gif)
+![01.gif](/Sample/numb3r5_leetcode_external_img.gif)
 
 ```python
-python LeetCode-Record-Sharing-Method.py -i uwi -n "uwi" -f "SHOWG.TTF" -bc None -fc "255,250,250" -fs "39,39,39" -p "./sample_img/pexels-pixabay-531880.jpg"
+python Entry.py -i uwi -n "uwi" -f "SHOWG.TTF" -bc None -fc "255,250,250" -fs "39,39,39" -p "./Sample/pexels-pixabay-531880.jpg"
 ```
-![02.gif](/sample_img/02.gif)
+![02.gif](/Sample/uwi_leetcode_external_img.gif)
 
 </br>
 
