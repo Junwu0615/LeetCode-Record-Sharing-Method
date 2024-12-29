@@ -21,11 +21,11 @@ class MakeGif:
         self.font_color = (int(temp[0]), int(temp[1]), int(temp[2]))
         temp = self.font_shadow.split(',')
         self.font_shadow = (int(temp[0]), int(temp[1]), int(temp[2]))
-        self.logo = './Depend/Logo/LeetCode_bbg_fw.png' # LeetCode_bbg_fw.png | LeetCode_bbg.png | LeetCode_wbg.png
+        self.logo = './package/Logo/LeetCode_bbg_fw.png' # LeetCode_bbg_fw.png | LeetCode_bbg.png | LeetCode_wbg.png
         self.font_style = f'C:/Windows/Fonts/{self.font}' # georgiab.ttf | MATURASC.TTF | MAGNETOB.TTF | AniMeMatrix-MB_EN.ttf
         self.headers = {'user-agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'}
         self.img_size = (450, 220)
-        self.save_path = './Sample'
+        self.save_path = './sample'
         self.console = Console()
 
     @staticmethod
